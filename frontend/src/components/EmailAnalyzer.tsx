@@ -15,7 +15,8 @@ const EmailAnalyzer: React.FC = () => {
     setSendResult(null);
 
     try {
-      const response = await fetch('http://localhost:8080/predict', {
+      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+      const response = await fetch(`${API_URL}/predict`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
