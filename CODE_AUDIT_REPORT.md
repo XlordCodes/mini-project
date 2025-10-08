@@ -273,7 +273,7 @@ print(f"Error loading model: {str(e)}")
 ### 22. **MAGIC NUMBERS** 🔵
 **File:** `phish_api.py:47`
 ```python
-max_length=512  # Why 512?
+max_length=64 
 ```
 **Remediation:** Use constants with documentation
 

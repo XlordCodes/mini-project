@@ -23,7 +23,7 @@ class ModelLoader:
     def __init__(self):
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         # Update path to use raw string and correct directory
-        self.model_path = r"D:\Muksid\KCG-College\A1-Machine-Learning-Project\MINI-PROJECT\urlbert-tiny-v4-phishing-classifier\model.safetensors"
+        self.model_path = "./"
         self.load_model()
 
     def load_model(self):
@@ -44,7 +44,7 @@ class ModelLoader:
                 text,
                 return_tensors="pt",
                 truncation=True,
-                max_length=512,
+                max_length=64,
                 padding=True
             )
             inputs = {k: v.to(self.device) for k, v in inputs.items()}
