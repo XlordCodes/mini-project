@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+.env/
+.venv/
+*.sqlite3
+*.db
+*.log
+
+# Jupyter Notebook
+*.ipynb_checkpoints
+
+# Model & weights
+*.h5
+*.pth
+
+# Node.js / React / Frontend
+node_modules/
+dist/
+.env.local
+.env.development
+.env.production
+
+# OS/Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# npm/yarn
+yarn.lock
+package-lock.json
+
+# Misc
+*.bak
+*.tmp
