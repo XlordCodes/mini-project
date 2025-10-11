@@ -1,21 +1,24 @@
 import React from 'react';
-import EmailAnalyzer from './components/EmailAnalyzer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import HomePage from './pages/HomePage';
+import EmailAnalysisPage from './pages/EmailAnalysisPage';
+import URLDetector from './pages/URLDetector';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Email Security Analysis Portal
-          </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Paste your email content below to analyze potential phishing indicators and security parameters
-          </p>
+    <BrowserRouter>
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-100">
+        <Header />
+        <div className="container mx-auto px-4 py-8">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/email-analysis" element={<EmailAnalysisPage />} />
+            <Route path="/url-detection" element={<URLDetector />} />
+          </Routes>
         </div>
-        <EmailAnalyzer />
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 

@@ -2,7 +2,7 @@
 
 A machine learning-powered application that analyzes email content to detect phishing attempts.
 
-**Built for:** School Project Demonstration
+**Built for:** Project Demonstration
 **Tech Stack:** Python FastAPI + React + TypeScript + URLBert ML Model
 
 ---
